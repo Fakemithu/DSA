@@ -20,9 +20,9 @@ public:
             }
         }
 
-        for(int i = n-1; i> index; i--){
+        for(int i=n-1; i>index; i--){
             if(rightmax > height[i]){
-                water += rightmax - height[i];
+                water+= rightmax - height[i];
             }
             else{
                 rightmax = height[i];
