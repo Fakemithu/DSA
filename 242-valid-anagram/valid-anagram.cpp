@@ -1,22 +1,26 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+
+        int n = s.length();
         if(s.length() != t.length()){
             return false;
+        
         }
 
-        int count[26] = {0};
+        string s1 = s;
+        string t1 = t;
 
-        for(int i=0; i<s.length(); i++){
-            count[s[i] - 'a']++;
-            count[t[i] - 'a']--;
-        }
+        sort(s1.begin(), s1.end());
+        sort(t1.begin(), t1.end());
 
-        for(int i=0; i<26; i++){
-            if(count[i] != 0){
+        for(int i=0; i<n; i++){
+            if(s1[i] != t1[i]){
                 return false;
             }
         }
+
+
         return true;
     }
 };
