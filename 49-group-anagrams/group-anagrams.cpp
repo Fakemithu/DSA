@@ -7,9 +7,9 @@ public:
             string key = s;
 
             sort(key.begin(), key.end());
-
             mp[key].push_back(s);
         }
+
         vector<vector<string>> ans;
 
         for(auto it : mp){
