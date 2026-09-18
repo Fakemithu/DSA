@@ -7,15 +7,14 @@ public:
             return false;
         }
 
-        int count[26] = {0};
+        string s1 = s;
+        string s2 = t;
+
+        sort(s1.begin(), s1.end());
+        sort(s2.begin(), s2.end());
 
         for(int i=0; i<n; i++){
-            count[s[i] - 'a']++;
-            count[t[i] - 'a']--;
-        }
-
-        for(int i=0; i<26; i++){
-            if(count[i] != 0){
+            if(s1[i] != s2[i]){
                 return false;
             }
         }
